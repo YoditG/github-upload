@@ -142,49 +142,42 @@ h6 {
 .story-logo {
 }
 
+/*-------------- Beginn EXPERTISE STYLES----------------------*/
+
 .expertise-container {
   display: flex;
   flex-direction: column;
-  height: 800px;
-  margin: 10%;
-  justify-content: space-around;
+  margin-bottom: 10%;
+  justify-content: space-between;
   width: 100%;
-  text-align: center;
-  align-content: center;
-  
+  height: 600px;
 }
 
 .expertise-header {
-  width: 100%;
-  height: 20%;
   font-size: 22px;
   letter-spacing: 1px;
   color: #413d4b;
   font-weight: 700;
   font-family: "Playfair Display";
   text-align: center;
-  width: 100%;
 }
 
 .expertise-subtitle{
-  text-align: flex-start;
+  text-align: center;
+  width: 100%;
 }
 
-.expertise-table { /* geändert*/
+.expertise-table { 
   display: flex;
   flex-flow: row wrap;
-  align-content: center;
-  justify-content: center;
+  justify-content: space-between;
+  align-content: space-between;
   width: 100%;
-  height: 100%;
-
 }
-
 
 .expertise-table-cell {
   display: flex;
   flex-direction: column;
-  width: 299px;
   font-size: 14px;
   letter-spacing: 1px;
   line-height: 22px;
@@ -193,31 +186,77 @@ h6 {
   font-family: "Roboto";
   text-align: center;
   justify-content: space-between;
-  align-content: center;
+  align-content: flex-start;
+  margin-bottom: 1em;
 }
+
+@media (max-width: 480px){
+  .expertise-table-cell {
+    width: 100%;
+  }
+
+  .expertise-table-cell:nth-child(1), 
+  .expertise-table-cell:nth-child(2),
+  .expertise-table-cell:nth-child(3),
+  .expertise-table-cell:nth-child(4),
+  .expertise-table-cell:nth-child(5){
+    border-bottom: 2px solid rgb(233, 227, 227);
+  
+  }
+}
+
+@media (max-width: 1500px){
+  .expertise-table-cell {
+    width: calc(100%/2);
+  }
+  
+  .expertise-table-cell:nth-child(1), 
+  .expertise-table-cell:nth-child(2),
+  .expertise-table-cell:nth-child(3),
+  .expertise-table-cell:nth-child(4){
+    border-bottom: 2px solid rgb(233, 227, 227);
+   
+   
+  }
+}
+
+@media (min-width: 1501px){
+  .expertise-table-cell {
+    width: calc(100%/3);
+  }
+  
+  .expertise-table-cell:nth-child(1), 
+  .expertise-table-cell:nth-child(2),
+  .expertise-table-cell:nth-child(3) {
+    border-bottom: 2px solid rgb(233, 227, 227);
+       
+  }
+
+}
+
 
 .table-cell-text {
   width: 299px;
-  height: 91px;
   font-size: 14px;
   letter-spacing: 1px;
   line-height: 22px;
   color: #333333;
   font-weight: 300;
   font-family: "Roboto";
-  text-align: center;
+  align-self: flex-start;
 }
 
 .table-cell-header {
-  width: 299px;
-  height: 47px;
+  
   font-size: 14px;
   letter-spacing: 1px;
   color: #413d4b;
   font-weight: 900;
   font-family: "Roboto";
-  text-align: center;
+
 }
+
+/*-------------- End EXPERTISE STYLES----------------------*/
 
 .contact-partner-container {
   display: flex;
